@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // The FAB-code can be removed
+        /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,15 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        }); */
         WebView webView = (WebView) findViewById(R.id.oscar);
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
         WebViewClient minapp = new WebViewClient();
         webView.setWebViewClient(minapp);
 
-        webView.loadUrl("http://wwwlab.iit.his.se/a14oscna/Mobil/Projekt/Start.html");
-        //webView.loadUrl("file:///android_asset/about.html");
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        //webView.loadUrl("http://wwwlab.iit.his.se/a14oscna/Mobil/Projekt/Main.html");
+        webView.loadUrl("file:///android_asset/about.html");
 
     }
 
